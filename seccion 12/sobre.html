@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Información personal y académica de Benjamin Brenis Perez">
+
+    <title>Sobre mí | Benjamin Brenis Perez</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f5f9;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #315b8a;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #e2eaf5;
+        }
+
+        /* Contenido principal */
+        main {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Tarjetas */
+        .tarjeta {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Títulos */
+        h2 {
+            color: #315b8a;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        h2 i {
+            margin-right: 8px;
+        }
+
+        /* Presentación */
+        .presentacion {
+            text-align: center;
+            padding: 35px 25px;
+        }
+
+        .presentacion .icono {
+            font-size: 65px;
+            color: #315b8a;
+            margin-bottom: 10px;
+        }
+
+        .presentacion p {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        /* Tabla de información */
+        .tabla-contenedor {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th {
+            background-color: #315b8a;
+            color: white;
+            text-align: left;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #dddddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f3f6fa;
+        }
+
+        /* Habilidades */
+        .habilidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .habilidad {
+            background-color: #e5edf8;
+            color: #315b8a;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Botones */
+        .botones {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #315b8a;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #234469;
+        }
+
+        .boton.secundario {
+            background-color: #526579;
+        }
+
+        .boton.secundario:hover {
+            background-color: #37485a;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #315b8a;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 35px;
+        }
+
+        /* Adaptación para celulares */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 23px;
+            }
+
+            main {
+                padding: 0 12px;
+            }
+
+            .tarjeta {
+                padding: 18px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+
+            .presentacion .icono {
+                font-size: 50px;
+            }
+
+            .boton {
+                display: block;
+                margin: 10px 0;
+            }
+
+            th, td {
+                padding: 9px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>
+            <i class="fas fa-user"></i>
+            BENJAMIN BRENIS PEREZ
+        </h1>
+
+        <p>Estudiante Superior | Administrador | Voleibolista</p>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Presentación -->
+        <section class="tarjeta presentacion">
+            <div class="icono">
+                <i class="fas fa-user-circle"></i>
+            </div>
+
+            <h2>Sobre mí</h2>
+
+            <p>Hola, soy <strong>Benjamin Brenis Perez</strong>.</p>
+
+            <p>
+                Soy estudiante superior interesado en la tecnología,
+                la programación y el desarrollo de nuevas habilidades.
+            </p>
+
+            <p>
+                En este espacio comparto parte de mi desarrollo académico,
+                mis conocimientos, proyectos y experiencias.
+            </p>
+        </section>
+
+        <!-- Información personal -->
+        <section class="tarjeta">
+            <h2>
+                <i class="fas fa-id-card"></i>
+                Información personal
+            </h2>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <tr>
+                        <th>Dato</th>
+                        <th>Información</th>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Nombre</strong></td>
+                        <td>Benjamin Brenis Perez</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Ocupación</strong></td>
+                        <td>Estudiante Superior</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Área de interés</strong></td>
+                        <td>Programación y Tecnología</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Rol</strong></td>
+                        <td>Estudiante y futuro profesional tecnológico</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Deporte</strong></td>
+                        <td>Voleibol</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Desarrollo académico -->
+        <section class="tarjeta">
+            <h2>
+                <i class="fas fa-graduation-cap"></i>
+                Mi desarrollo académico
+            </h2>
+
+            <p>
+                Durante mi formación académica he adquirido conocimientos
+                relacionados con diferentes áreas de la tecnología.
+            </p>
+
+            <p>
+                Mi objetivo es continuar aprendiendo y mejorar mis
+                habilidades para desarrollarme profesionalmente.
+            </p>
+
+            <p>
+                Tengo interés en temas como programación, bases de datos,
+                desarrollo web, sistemas informáticos y administración
+                de tecnología.
+            </p>
+        </section>
+
+        <!-- Conocimientos -->
+        <section class="tarjeta">
+            <h2>
+                <i class="fas fa-code"></i>
+                Mis conocimientos
+            </h2>
+
+            <div class="habilidades">
+                <span class="habilidad">
+                    <i class="fab fa-python"></i> Python
+                </span>
+
+                <span class="habilidad">
+                    <i class="fas fa-database"></i> Bases de Datos
+                </span>
+
+                <span class="habilidad">
+                    <i class="fas fa-code"></i> HTML
+                </span>
+
+                <span class="habilidad">
+                    <i class="fab fa-css3-alt"></i> CSS
+                </span>
+
+                <span class="habilidad">
+                    <i class="fas fa-network-wired"></i> Redes
+                </span>
+
+                <span class="habilidad">
+                    <i class="fas fa-laptop"></i> Tecnología
+                </span>
+            </div>
+        </section>
+
+        <!-- Objetivos -->
+        <section class="tarjeta">
+            <h2>
+                <i class="fas fa-bullseye"></i>
+                Mis objetivos
+            </h2>
+
+            <p>
+                Mi objetivo es seguir desarrollando mis conocimientos
+                tecnológicos, aprender nuevas herramientas y adquirir
+                experiencia mediante proyectos académicos y personales.
+            </p>
+
+            <p>
+                También busco mejorar constantemente mis habilidades
+                para estar preparado para futuros retos profesionales.
+            </p>
+        </section>
+
+        <!-- Botones de navegación -->
+        <div class="botones">
+            <a href="index.html" class="boton">
+                <i class="fas fa-home"></i>
+                Regresar a la página principal
+            </a>
+
+            <a href="proyectos.html" class="boton secundario">
+                <i class="fas fa-laptop-code"></i>
+                Ver mis proyectos
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>
+            © 2026 Benjamin Brenis Perez |
+            Mi espacio web personal
+        </p>
+    </footer>
+
+</body>
+</html>
+```

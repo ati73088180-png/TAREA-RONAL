@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Insertando archivos multimedia</title>
+
+    <style>
+        /* ADAPTAR LA PAGINA A MOVILES */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+            padding: 15px;
+            max-width: 900px;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        img,
+        video,
+        audio {
+            max-width: 100%;
+            height: auto;
+        }
+
+        audio {
+            display: block;
+            width: 100%;
+            min-height: 45px;
+            margin: 10px 0;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 873px;
+            aspect-ratio: 16 / 9;
+            border: none;
+            display: block;
+            margin: 20px auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            max-width: 100%;
+            overflow-wrap: break-word;
+        }
+
+        h2 {
+            color: #004085;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        a {
+            overflow-wrap: break-word;
+        }
+
+        /* BOTON REGRESAR AL INDEX */
+        .boton-regresar {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #004085, #0078d4);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 64, 133, 0.25);
+            transition: 0.3s;
+        }
+
+        .boton-regresar:hover {
+            background: #002752;
+            transform: translateY(-3px);
+        }
+
+        /* ADAPTACION A CELULARES */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            iframe {
+                width: 100%;
+            }
+
+            img,
+            video {
+                width: 100%;
+                height: auto;
+            }
+
+            .boton-regresar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <hr>
+
+    <h2>Ubicación de la Plaza Principal de Chiclayo</h2>
+
+    <h2>Insertamos una imagen</h2>
+
+    <picture>
+        <source srcset="imagen/chiclayo.jpeg" type="image/jpeg">
+
+        <img src="imagen/chiclayo.jpeg"
+             alt="Banner principal de Chiclayo"
+             width="1200"
+             height="400">
+    </picture>
+
+    <hr>
+
+    <h2>Insertamos un audio</h2>
+
+    <audio controls preload="metadata">
+        <source src="audio/la_triada-perfecta.ogg" type="audio/ogg">
+        <source src="audio/la_triada_perfecta.mp3" type="audio/mpeg">
+        Este navegador no soporta el elemento de audio HTML5.
+    </audio>
+
+    <hr>
+
+    <h2>Insertamos un video</h2>
+
+    <video width="800" height="450" controls>
+        <source src="video/video_formularios.mp4" type="video/mp4">
+        Este navegador no soporta el elemento de video HTML5.
+    </video>
+
+    <hr>
+
+    <h2>Insertamos un video de YouTube</h2>
+
+    <iframe
+        src="https://www.youtube.com/embed/-YafsY8FcE8"
+        title="Sesion 10 Metodologia de Desarrollo de Software"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+
+    <hr>
+
+    <h2>Ubicación de la Plaza Principal de Chiclayo en Google Maps</h2>
+
+    <iframe
+        src="https://maps.google.com/maps?q=Plaza%20Principal%20de%20Chiclayo&z=17&output=embed"
+        title="Mapa Plaza Principal de Chiclayo"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+
+    <hr>
+
+    <h2>Insertamos otro video</h2>
+
+    <iframe
+        src="https://www.youtube.com/embed/BvHnaPG2Kto"
+        title="Sesion 02 Metodologias de Desarrollo de Software"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+
+    <!-- BOTON PARA REGRESAR A LA PAGINA PRINCIPAL -->
+    <a href="index.html" class="boton-regresar">
+         Regresar al Inicio
+    </a>
+
+</body>
+</html>

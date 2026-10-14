@@ -1,0 +1,184 @@
+/* ===== Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.contenedor-principal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== Cabecera ===== */
+.cabecera-sitio {
+    background: linear-gradient(135deg, #1a2a6c, #2c3e50);
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.titulo-principal {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+/* ===== Navegación ===== */
+.menu-navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.enlace-menu {
+    display: block;
+    padding: 10px 18px;
+    background: #fff;
+    color: #1a2a6c;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+
+.enlace-menu:hover {
+    background: #1a2a6c;
+    color: #fff;
+}
+
+/* ===== Layout principal + lateral ===== */
+.estructura-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* ===== Tarjetas de sección ===== */
+.seccion-tarjeta {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+}
+
+.titulo-seccion {
+    color: #1a2a6c;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.texto-parrafo {
+    margin-bottom: 16px;
+}
+
+/* ===== Rejilla de tarjetas ===== */
+.rejilla-responsiva {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.tarjeta-adaptable {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #1a2a6c;
+    border-radius: 8px;
+    padding: 18px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta-adaptable:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.tarjeta-adaptable h3 {
+    color: #1a2a6c;
+    margin-bottom: 6px;
+}
+
+/* ===== Barra lateral ===== */
+.barra-lateral {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    align-self: start;
+}
+
+.titulo-lateral {
+    color: #1a2a6c;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.barra-lateral p {
+    margin-bottom: 8px;
+}
+
+/* ===== Pie de página ===== */
+.pie-pagina {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* ===== Responsive: tablet ===== */
+@media (min-width: 768px) {
+    .estructura-principal {
+        grid-template-columns: 2fr 1fr;
+    }
+    .rejilla-responsiva {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== Responsive: desktop ===== */
+@media (min-width: 992px) {
+    .rejilla-responsiva {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.volver {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.volver a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #1a2a6c;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.volver a:hover {
+    background: #2c3e50;
+}

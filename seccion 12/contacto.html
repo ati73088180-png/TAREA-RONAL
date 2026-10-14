@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Página de contacto de Benjamin Brenis Perez">
+
+    <title>Contacto | Benjamin Brenis Perez</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ESTILOS GENERALES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f1f5f9;
+            color: #334155;
+            line-height: 1.7;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: linear-gradient(135deg, #102a43, #315b8a);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header .icono-principal {
+            font-size: 42px;
+            color: #93c5fd;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #dbeafe;
+            font-size: 16px;
+        }
+
+        /* CONTENIDO */
+        main {
+            max-width: 850px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        /* TARJETAS */
+        .tarjeta {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+        }
+
+        /* PRESENTACION */
+        .presentacion {
+            text-align: center;
+            padding: 40px 25px;
+        }
+
+        .presentacion .icono {
+            width: 85px;
+            height: 85px;
+            background: #e0edff;
+            color: #315b8a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            font-size: 40px;
+        }
+
+        h2 {
+            color: #183b63;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .presentacion p {
+            color: #64748b;
+            font-size: 16px;
+        }
+
+        /* DATOS DE CONTACTO */
+        .dato {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 18px;
+            margin-bottom: 14px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .dato:last-child {
+            margin-bottom: 0;
+        }
+
+        .dato:hover {
+            background: #eff6ff;
+            border-color: #bfdbfe;
+            transform: translateY(-2px);
+        }
+
+        .dato .icono-dato {
+            min-width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #dbeafe;
+            color: #1d4ed8;
+            border-radius: 10px;
+            font-size: 21px;
+        }
+
+        .dato h3 {
+            color: #183b63;
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+
+        .dato p {
+            color: #64748b;
+            font-size: 15px;
+            overflow-wrap: anywhere;
+        }
+
+        .dato a {
+            color: #2563a6;
+            text-decoration: none;
+        }
+
+        .dato a:hover {
+            text-decoration: underline;
+        }
+
+        /* BOTONES */
+        .botones {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .boton {
+            display: inline-block;
+            background: #2563a6;
+            color: white;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #183b63;
+            transform: translateY(-3px);
+        }
+
+        .boton.secundario {
+            background: #e2e8f0;
+            color: #183b63;
+        }
+
+        .boton.secundario:hover {
+            background: #cbd5e1;
+        }
+
+        /* PIE DE PAGINA */
+        footer {
+            background: #102a43;
+            color: #dbeafe;
+            text-align: center;
+            padding: 22px 15px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        /* ADAPTACION A CELULARES */
+        @media (max-width: 600px) {
+            header {
+                padding: 30px 15px;
+            }
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            main {
+                padding: 0 12px;
+                margin: 20px auto;
+            }
+
+            .tarjeta {
+                padding: 22px 18px;
+            }
+
+            .presentacion {
+                padding: 30px 18px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+
+            .dato {
+                gap: 12px;
+                padding: 13px;
+            }
+
+            .botones {
+                flex-direction: column;
+            }
+
+            .boton {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="icono-principal">
+            <i class="fas fa-envelope"></i>
+        </div>
+
+        <h1>Contacto</h1>
+
+        <p>Benjamin Brenis Perez</p>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PRESENTACION -->
+        <section class="tarjeta presentacion">
+
+            <div class="icono">
+                <i class="fas fa-user-circle"></i>
+            </div>
+
+            <h2>Ponte en contacto conmigo</h2>
+
+            <p>
+                Si deseas comunicarte conmigo, puedes utilizar
+                los siguientes medios de contacto.
+            </p>
+
+        </section>
+
+        <!-- INFORMACION DE CONTACTO -->
+        <section class="tarjeta">
+
+            <h2>
+                <i class="fas fa-address-book"></i>
+                Mis datos de contacto
+            </h2>
+
+            <div class="dato">
+
+                <div class="icono-dato">
+                    <i class="fas fa-envelope"></i>
+                </div>
+
+                <div>
+                    <h3>Correo electrónico</h3>
+
+                    <p>
+                        <a href="mailto:benjaminbrenisperez@gmail.com">
+                            benjaminbrenisperez@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="dato">
+
+                <div class="icono-dato">
+                    <i class="fas fa-phone"></i>
+                </div>
+
+                <div>
+                    <h3>Teléfono</h3>
+
+                    <p>Puedes agregar tu número aquí</p>
+                </div>
+
+            </div>
+
+            <div class="dato">
+
+                <div class="icono-dato">
+                    <i class="fas fa-location-dot"></i>
+                </div>
+
+                <div>
+                    <h3>Ubicación</h3>
+
+                    <p>Perú</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- NAVEGACION -->
+        <div class="botones">
+
+            <a href="index.html" class="boton">
+                <i class="fas fa-home"></i>
+                Página principal
+            </a>
+
+            <a href="sobre-mi.html" class="boton secundario">
+                <i class="fas fa-user"></i>
+                Sobre mí
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+        <p>
+            &copy; 2026 Benjamin Brenis Perez |
+            Mi espacio web personal
+        </p>
+    </footer>
+
+</body>
+</html>

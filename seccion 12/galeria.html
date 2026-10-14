@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galería | BENJAMIN BRENIS PEREZ</title>
+
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff, #e3f2fd);
+        }
+
+        /* TÍTULO */
+
+        .titulo-galeria {
+            text-align: center;
+            font-size: 42px;
+            color: #1565c0;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .descripcion-galeria {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 35px;
+        }
+
+        /* BOTÓN REGRESAR */
+
+        .regresar {
+            display: inline-block;
+            text-decoration: none;
+            background: #1565c0;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .regresar:hover {
+            background: #0d47a1;
+            transform: scale(1.05);
+        }
+
+        /* GALERÍA */
+
+        .galeria {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* TARJETAS */
+
+        .foto {
+            background-color: white;
+            border-radius: 15px;
+            padding: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+            text-align: center;
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .foto:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        /* IMÁGENES */
+
+        .foto img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .foto h3 {
+            color: #1565c0;
+            margin: 15px 0 5px;
+            font-size: 20px;
+        }
+
+        /* LÍNEA */
+
+        hr {
+            border: none;
+            height: 3px;
+            background: linear-gradient(
+                to right,
+                #1565c0,
+                #42a5f5,
+                #1565c0
+            );
+
+            margin: 30px 0;
+        }
+
+        /* CELULARES */
+
+        @media (max-width: 800px) {
+
+            .galeria {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .titulo-galeria {
+                font-size: 32px;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .galeria {
+                grid-template-columns: 1fr;
+            }
+
+            .titulo-galeria {
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- BOTÓN PARA REGRESAR AL INDEX -->
+
+    <a href="index.html" class="regresar">
+        ← Regresar a Inicio
+    </a>
+
+    <!-- TÍTULO -->
+
+    <h1 class="titulo-galeria">
+        MI GALERÍA PERSONAL
+    </h1>
+
+    <p class="descripcion-galeria">
+        Bienvenidos a mi galería personal. Aquí comparto algunas
+        de mis fotos y recuerdos favoritos sobre programación.
+    </p>
+
+    <hr>
+
+    <!-- GALERÍA -->
+
+    <div class="galeria">
+
+        <div class="foto">
+            <img src="imagenes/foto.jpg" alt="Foto personal 1">
+            <h3>Mi foto 1</h3>
+        </div>
+
+        <div class="foto">
+            <img src="imagenes/foto (1).jpeg" alt="Foto personal 2">
+            <h3>Mi foto 2</h3>
+        </div>
+
+        <div class="foto">
+            <img src="imagenes/foto (2).jpeg" alt="Foto personal 3">
+            <h3>Mi foto 3</h3>
+        </div>
+
+        <div class="foto">
+            <img src="imagenes/foto (3).jpeg" alt="Foto personal 4">
+            <h3>Mi foto 4</h3>
+        </div>
+
+        <div class="foto">
+            <img src="imagenes/foto (4).jpeg" alt="Foto personal 5">
+            <h3>Mi foto 5</h3>
+        </div>
+
+        <div class="foto">
+            <img src="imagenes/foto (5).jpeg" alt="Foto personal 6">
+            <h3>Mi foto 6</h3>
+        </div>
+
+        <div class="foto">
+            <img src="imagenes/foto (6).jpeg" alt="Foto personal 7">
+            <h3>Mi foto 7</h3>
+        </div>
+
+        <div class="foto">
+            <img src="imagenes/foto (7).jpeg" alt="Foto personal 8">
+            <h3>Mi foto 8</h3>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- AUDIO -->
+
+    <audio id="musica" autoplay loop>
+        <source src="audio/make.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+    window.addEventListener("load", function() {const musica = document.getElementById("musica"); musica.play().catch(function() {console.log("El navegador bloqueó el autoplay.");});});
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 12 - Diseño Web Responsive con HTML y CSS</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div class="contenedor-principal">
+
+        <header class="cabecera-sitio">
+            <h1 class="titulo-principal">IES "República Federal de Alemania"</h1>
+            <p class="subtitulo">Fundamentos de Desarrollo Web — Sesión 12</p>
+        </header>
+
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="#fundamentos" class="enlace-menu">Fundamentos RWD</a></li>
+                <li><a href="#resoluciones" class="enlace-menu">Breakpoints</a></li>
+                <li><a href="#practica" class="enlace-menu">Rejilla Flexbox</a></li>
+            </ul>
+        </nav>
+
+        <div class="estructura-principal">
+
+            <main class="contenido-principal">
+
+                <article id="fundamentos" class="seccion-tarjeta">
+                    <h2 class="titulo-seccion">1. Principios de Adaptabilidad Web</h2>
+                    <p class="texto-parrafo">
+                        El diseño web responsivo garantiza que la información sea accesible y legible desde cualquier dispositivo, sin requerir desplazamientos horizontales.
+                    </p>
+                </article>
+
+                <article id="resoluciones" class="seccion-tarjeta">
+                    <h2 class="titulo-seccion">2. Rejilla de Contenidos Adaptable</h2>
+                    <p class="texto-parrafo">
+                        Estas tarjetas cambian automáticamente de 1 columna en móviles a 2 o 3 columnas en pantallas más anchas:
+                    </p>
+
+                    <div class="rejilla-responsiva">
+                        <div class="tarjeta-adaptable">
+                            <h3>Mobile layout</h3>
+                            <p>Ancho completo (100%) en pantallas menores a 576px.</p>
+                        </div>
+                        <div class="tarjeta-adaptable">
+                            <h3>Tablet layout</h3>
+                            <p>Rejilla de 2 columnas a partir de 768px.</p>
+                        </div>
+                        <div class="tarjeta-adaptable">
+                            <h3>Desktop layout</h3>
+                            <p>Distribución horizontal de 3 columnas en pantallas de 992px o más.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </main>
+
+            <aside class="barra-lateral">
+                <h3 class="titulo-lateral">Ficha de sesión</h3>
+                <p><b>Tema:</b> Responsive Web Design</p>
+                <p><b>Unidad:</b> Fundamentos de Desarrollo Web</p>
+                <p><b>Semana:</b> Semana 6 (Sesión 12)</p>
+            </aside>
+
+        </div>
+
+        <footer class="pie-pagina">
+            <p>© 2027 PC COMPANY — Sesión 12, IES "República Federal de Alemania", Chiclayo</p>
+            <p>Profesor: Lic. Benjamín Brenis Pérez</p>
+        </footer>
+
+        <p class="volver">
+            <a href="index.html">🏠 Regresar a la página principal</a>
+        </p>
+
+    </div>
+
+</body>
+</html>
+

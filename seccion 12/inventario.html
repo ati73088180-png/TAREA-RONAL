@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Productos</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f5f6f8;
+            padding: 40px 20px;
+            color: #2d3748;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 32px;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #718096;
+            margin-bottom: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        thead th {
+            background-color: #1a202c;
+            color: #ffffff;
+            text-align: left;
+            padding: 12px 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        thead th:first-child {
+            border-radius: 6px 0 0 0;
+        }
+
+        thead th:last-child {
+            border-radius: 0 6px 0 0;
+        }
+
+        tbody td {
+            padding: 12px 14px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        tbody tr:hover {
+            background-color: #edf2f7;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #ebf4ff;
+            color: #2b6cb0;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        tfoot td {
+            padding: 14px;
+            text-align: center;
+            font-size: 13px;
+            color: #718096;
+        }
+
+        /* BOTON REGRESAR AL INDEX */
+        .boton-regresar {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #004085, #0078d4);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 64, 133, 0.20);
+            transition: 0.3s;
+        }
+
+        .boton-regresar:hover {
+            background: #002752;
+            transform: translateY(-3px);
+        }
+
+        /* ADAPTACION A CELULARES */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 10px;
+            }
+
+            .container {
+                padding: 18px 12px;
+                overflow-x: auto;
+            }
+
+            table {
+                font-size: 13px;
+                min-width: 450px;
+            }
+
+            thead th,
+            tbody td {
+                padding: 10px 8px;
+            }
+
+            .boton-regresar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Inventario de Productos</h1>
+        <p class="subtitle">Ejemplo de tabla con colspan y rowspan</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th colspan="2">Stock</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td rowspan="2">Laptop</td>
+                    <td>$1,200</td>
+                    <td>Almacén: 10</td>
+                    <td>Tienda</td>
+                </tr>
+
+                <tr>
+                    <td><span class="badge">Oferta</span> $1,100</td>
+                    <td colspan="2">Solo en tienda</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        Precios sujetos a disponibilidad de inventario
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- BOTON PARA REGRESAR A LA PAGINA PRINCIPAL -->
+        <a href="index.html" class="boton-regresar">
+             Regresar al Inicio
+        </a>
+
+    </div>
+
+</body>
+</html>

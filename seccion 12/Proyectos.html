@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyectos | Benjamín Brenis Pérez</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ESTILOS GENERALES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f5f9;
+            color: #334155;
+            line-height: 1.7;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: linear-gradient(135deg, #102a43, #39659d);
+            text-align: center;
+            padding: 35px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #dbeafe;
+            font-size: 16px;
+        }
+
+        /* MENU */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 14px;
+            border-radius: 7px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #2563a6;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .contenedor {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .titulo-principal {
+            color: #102a43;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .descripcion {
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        /* TARJETAS DE PROYECTOS */
+        .proyecto {
+            background-color: #f8fafc;
+            padding: 25px;
+            margin: 22px 0;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid #39659d;
+            transition: 0.3s;
+        }
+
+        .proyecto:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .proyecto h2 {
+            color: #315b8a;
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .proyecto h2 i {
+            margin-right: 8px;
+        }
+
+        .proyecto p {
+            margin-bottom: 12px;
+        }
+
+        .proyecto ul {
+            padding-left: 25px;
+            margin-top: 10px;
+        }
+
+        .proyecto li {
+            padding: 4px 0;
+        }
+
+        /* BOTONES */
+        .botones {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #39659d;
+            color: white;
+            padding: 12px 22px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #284b78;
+            transform: translateY(-2px);
+        }
+
+        /* PIE DE PAGINA */
+        footer {
+            background-color: #102a43;
+            color: #dbeafe;
+            text-align: center;
+            padding: 20px;
+            margin-top: 35px;
+        }
+
+        /* ADAPTACION A CELULARES */
+        @media (max-width: 600px) {
+            header {
+                padding: 25px 12px;
+            }
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            nav {
+                gap: 5px;
+            }
+
+            nav a {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .contenedor {
+                margin: 15px;
+                padding: 20px;
+            }
+
+            .titulo-principal {
+                font-size: 25px;
+            }
+
+            .proyecto {
+                padding: 18px;
+            }
+
+            .proyecto h2 {
+                font-size: 20px;
+            }
+
+            .boton {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>
+            <i class="fas fa-laptop-code"></i>
+            BENJAMIN BRENIS PEREZ
+        </h1>
+
+        <p>Estudiante Superior | Administrador | Voleibolista</p>
+
+        <nav>
+            <a href="index.html">
+                <i class="fas fa-home"></i> Inicio
+            </a>
+
+            <a href="sobre.html">
+                <i class="fas fa-user"></i> Sobre mí
+            </a>
+
+            <a href="proyectos.html">
+                <i class="fas fa-laptop-code"></i> Proyectos
+            </a>
+
+            <a href="contacto.html">
+                <i class="fas fa-envelope"></i> Contacto
+            </a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
+
+        <h1 class="titulo-principal">
+            <i class="fas fa-folder-open"></i>
+            Mis Proyectos
+        </h1>
+
+        <p class="descripcion">
+            En este espacio presento mis principales actividades relacionadas
+            con la tecnología, venta de productos y reparación de equipos.
+        </p>
+
+        <!-- PROYECTO 1 -->
+        <section class="proyecto">
+            <h2>
+                <i class="fas fa-shopping-cart"></i>
+                Venta de artículos tecnológicos
+            </h2>
+
+            <p>
+                Me dedico a la venta de diferentes artículos tecnológicos,
+                ofreciendo productos de buena calidad para estudiantes,
+                hogares y negocios.
+            </p>
+
+            <p><strong>Productos:</strong></p>
+
+            <ul>
+                <li>Computadoras y laptops</li>
+                <li>Teclados y mouse</li>
+                <li>Audífonos</li>
+                <li>Cargadores y cables</li>
+                <li>Accesorios para celulares</li>
+                <li>Memorias USB y tarjetas de memoria</li>
+            </ul>
+        </section>
+
+        <!-- PROYECTO 2 -->
+        <section class="proyecto">
+            <h2>
+                <i class="fas fa-tools"></i>
+                Reparación de equipos tecnológicos
+            </h2>
+
+            <p>
+                También realizo trabajos de mantenimiento y reparación
+                de equipos tecnológicos para ayudar a mantenerlos
+                funcionando correctamente.
+            </p>
+
+            <ul>
+                <li>Mantenimiento de computadoras</li>
+                <li>Revisión de equipos</li>
+                <li>Instalación de programas</li>
+                <li>Eliminación de virus</li>
+                <li>Configuración de sistemas</li>
+                <li>Limpieza y mantenimiento preventivo</li>
+            </ul>
+        </section>
+
+        <!-- OBJETIVO -->
+        <section class="proyecto">
+            <h2>
+                <i class="fas fa-bullseye"></i>
+                Mi objetivo
+            </h2>
+
+            <p>
+                Seguir aprendiendo sobre tecnología, programación y reparación
+                de equipos para ofrecer mejores productos y servicios a mis
+                clientes.
+            </p>
+        </section>
+
+        <!-- BOTON PARA REGRESAR -->
+        <div class="botones">
+            <a class="boton" href="index.html">
+                <i class="fas fa-arrow-left"></i>
+                Regresar al inicio
+            </a>
+        </div>
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+        <p>
+            &copy; 2026 Benjamin Brenis Perez |
+            Mi espacio web personal
+        </p>
+    </footer>
+
+</body>
+</html>

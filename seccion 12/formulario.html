@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementacion de Formularios Wed</title>
+    <style>
+        /*estilos genereales y caja responsive */
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20PX;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        header {
+            text-align: center;
+            border-bottom: 3px solid #004085;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        header h1 {
+            color: #004085;
+            margin: 0 0 5px 0;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin: 0;
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+
+
+        fieldset {
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: #fafafa;
+        }
+        legend {
+            font-weight: bold;
+            color: #004085;
+            padding: 0 10px;
+            font-size: 1.1rem;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group-inline {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .form-group-incline > div {
+            flex: 1;
+            min-width: 220px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .required::after {
+            content: " *";
+            color: #dc3545;
+        }
+
+        /* estilos de entradas de texto, selects y textarea */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            transition: border-color 0.3, box-shadow 0.3;
+        }
+
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #80bdff;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+        }
+
+        .radio-group, .checkbox_group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+
+        /* botones de accion*/
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2;  
+        }
+        .btn-submit {
+            background-color: #004085;
+            color: #ffffff;
+        }
+        .btn-submit:hover {
+            background-color: #002752;
+        }
+        .btn-reset {
+            background-color: #6c757d;
+            color: #ffffff;
+        }
+        .btn-reset:hover {
+            background-color: #545b60;
+        }
+
+        /* adaptabilidad a telefonos moviles */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            .button-group {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1> IESP "Republica Federal De Alemania"</h1>
+            <p>Ficha Registarl de Estudiante -  Fundamentos de Desarrollo Web </p>
+        </header>
+
+        <form action="procesar_registro.php" method="post" enctype="multipart/form-data" autocomplete="on">
+
+
+            <fieldset>
+                <legend>1. Datos Personales del Postulante</legend>
+
+                <div class="form-group-incline">
+                    <div class="form-group">
+                        <label for="nombres" class="required">Nombres Completos:</label>
+                        <input type="text" id="nombres" placeholder="Ej. Benjamin Giovani" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos" class="required">Apellidos Completos</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Ej. Brenis Perez" required>
+                   </div>
+                </div>
+
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="dni" class="required">DNI / Documento:</label>
+                        <input type="text" id="dni" name="dni" placeholder="8 digitos" pattern="[0-9]{8}" maxlength="8" required title="ingrese exactamente 8 numeros enteros.">      
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha nac" class="required">Fecha de Nacimiento:</label>
+                        <input type="date" id="fecha_nac" name="fecha_nac" min="1950-01-01" max="2010-12-31" required>
+                    </div>
+                </div>
+                
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="correo" class="required">Correo electrónico:</label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@dominio.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono"> Telefono / Celular:</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="931789636" pattern="[0-9]{9}" maxlength="9">
+                    </div>
+                </div>
+            </fieldset>
+             
+
+            <fieldset>
+                <legend>2. Informacion Academica</legend>
+
+                <div class="form-group">
+                    <label for="programa" class="required">Programa de Estudios</label>
+                    <select id="programa" name="programa" required>
+                        <option value="" disabled selected>--Seleccione una especialidad --</option>
+                        <optgroup label="Tecnologias de la informacion">
+                            <option value="ATI">Arquictectura de plataformas y servicio de Ti</option>
+                            <option value="DS">Computacion e Informatica</option>
+                        </optgroup>
+                        <optgroup label="otras carreras tecnicas">
+                            
+                        </optgroup>
+                    </select>
+
+                </div>
+            </fieldset>
+
+             <!-- BOTON PARA REGRESAR A LA PAGINA PRINCIPAL -->
+        <div class="button-group">
+            <a href="index.html" class="btn btn-reset" style="text-decoration: none; text-align: center;">
+                <i class="fa-solid fa-house"></i> Regresar al Inicio
+            </a>
+        </div>
+
+    </form>
+</div>  
+
+    </div>  
+    
+</body>
+</html>

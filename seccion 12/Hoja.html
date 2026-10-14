@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contáctame - Benjamin Brenis Perez</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            color: #004085;
+            margin-bottom: 25px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        input, textarea {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #0078d4;
+            box-shadow: 0 0 5px rgba(0, 120, 212, 0.3);
+        }
+
+        button {
+            background: #0078d4;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #005ea6;
+        }
+
+        /* BOTON REGRESAR AL INDEX */
+        .boton-regresar {
+            display: block;
+            background: #004085;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton-regresar:hover {
+            background: #0078d4;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 15px auto;
+                padding: 12px;
+            }
+
+            form {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Contáctame</h2>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="2d716193-ea5a-4243-ace1-5f706b9a2016">
+
+        <input type="hidden" name="subject" value="Nuevo mensaje desde la pagina de Benjamin Brenis Perez">
+
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+
+        <textarea name="mensaje" rows="6" placeholder="Escribe tu mensaje" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+
+    </form>
+
+    
+    <a href="index.html" class="boton-regresar">
+         Regresar al Inicio
+    </a>
+
+</body>
+</html>
+```
